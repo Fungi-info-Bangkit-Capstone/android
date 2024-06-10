@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.analyze.AnalyzeActivity">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingBottom="10dp"
+        android:orientation="horizontal"
+      >
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/icon_back"
+        android:layout_marginStart="30dp"
+        app:tint="@color/primary"
+        />
+
+    <TextView
+        android:id="@+id/hasil_deteksi"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_marginStart="30dp"
+        tools:text="@string/hasil_deteksi" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/result_image"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/header"
+        app:srcCompat="@drawable/image_preview" />
+
+    <TextView
+        android:id="@+id/result_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/primary"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:layout_marginTop="20dp"
+
+        android:layout_below="@id/result_image"
+        tools:text="@string/hasil" />
+
+    <Button
+        android:id="@+id/btn_aksi"
+        android:layout_width="0dp"
+        style="@style/CustomButton"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/simpan_jamur_ini"
+        app:backgroundTint="@null"
+        app:layout_constraintTop_toBottomOf="@id/result_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+</RelativeLayout>
