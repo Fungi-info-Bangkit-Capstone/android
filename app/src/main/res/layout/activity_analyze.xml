@@ -10,29 +10,27 @@
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="20dp"
-        android:paddingBottom="10dp"
         android:orientation="horizontal"
-      >
+        android:paddingTop="20dp"
+        android:paddingBottom="10dp">
 
-    <ImageView
-        android:id="@+id/back_button"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/icon_back"
-        android:layout_marginStart="30dp"
-        app:tint="@color/primary"
-        />
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/icon_back"
+            app:tint="@color/primary" />
 
-    <TextView
-        android:id="@+id/hasil_deteksi"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="30sp"
-        android:layout_marginStart="30dp"
-        tools:text="@string/hasil_deteksi" />
+        <TextView
+            android:id="@+id/hasil_deteksi"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="30dp"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:text="@string/hasil_deteksi" />
     </LinearLayout>
 
     <ImageView
@@ -53,23 +51,24 @@
         android:textStyle="bold"
         android:textSize="40sp"
         android:layout_marginTop="20dp"
-
         android:layout_below="@id/result_image"
         tools:text="@string/hasil" />
 
     <Button
         android:id="@+id/btn_aksi"
-        android:layout_width="0dp"
-        style="@style/CustomButton"
+        android:layout_width="match_parent"
+        android:background="@drawable/custom_button2"
+        android:textStyle="bold"
+        android:textSize="15sp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
+        android:layout_marginTop="30dp"
         android:layout_marginBottom="10dp"
         android:text="@string/simpan_jamur_ini"
         app:backgroundTint="@null"
-        app:layout_constraintTop_toBottomOf="@id/result_text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_below="@+id/result_text"
+        />
 
 
 

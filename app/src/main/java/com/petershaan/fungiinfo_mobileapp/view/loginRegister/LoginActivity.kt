@@ -228,6 +228,11 @@ class LoginActivity : AppCompatActivity() {
             }
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        overridePendingTransition(R.anim.slide_in_bottom, R.anim.slide_out_bottom)
+    }
+
     companion object {
         private const val RC_SIGN_IN = 9001
     }
