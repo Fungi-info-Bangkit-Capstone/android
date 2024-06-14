@@ -5,12 +5,8 @@ import com.petershaan.fungiinfo_mobileapp.data.local.AppDao
 import com.petershaan.fungiinfo_mobileapp.data.local.ClassificationResult
 
 class ResultRepository(private val dao: AppDao) {
-    fun getAll(): LiveData<List<ClassificationResult>> {
-        return dao.getAll()
-    }
-
-    fun getById(id: Int): LiveData<ClassificationResult> {
-        return dao.getClassificationResultById(id)
+    fun getAllResultsForUser(userId: String): LiveData<List<ClassificationResult>> {
+        return dao.getAllResultsForUser(userId)
     }
 
     suspend fun insert(classificationResult: ClassificationResult) {

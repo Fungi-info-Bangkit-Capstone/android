@@ -8,12 +8,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.petershaan.fungiinfo_mobileapp.R
+import com.google.firebase.auth.FirebaseAuth
 import com.petershaan.fungiinfo_mobileapp.data.local.ClassificationResult
 import com.petershaan.fungiinfo_mobileapp.databinding.FragmentHistoryBinding
 import com.petershaan.fungiinfo_mobileapp.util.ViewModelFactory
 import com.petershaan.fungiinfo_mobileapp.view.analyze.AnalyzeAdapter
-import com.petershaan.fungiinfo_mobileapp.view.history.HistoryViewModel
 
 
 class HistoryFragment : Fragment() {
@@ -22,6 +21,8 @@ class HistoryFragment : Fragment() {
     private val viewModel: HistoryViewModel by viewModels {
         ViewModelFactory.getInstance(requireContext())
     }
+
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -35,6 +36,8 @@ class HistoryFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        auth = FirebaseAuth.getInstance()
+
         setupRecyclerView()
         observeLiveData()
     }
@@ -45,11 +48,15 @@ class HistoryFragment : Fragment() {
     }
 
     private fun observeLiveData() {
-        viewModel.results.observe(viewLifecycleOwner) { results ->
-            setResults(results)
-            toggleEmptyView(results)
+        auth.currentUser?.let { user ->
+            viewModel.loadResultsForUser(user.uid)
+            viewModel.results.observe(viewLifecycleOwner) { results ->
+                setResults(results)
+                toggleEmptyView(results)
+            }
         }
     }
+
     private fun setResults(results: List<ClassificationResult>) {
         val adapter = AnalyzeAdapter()
         adapter.submitList(results)

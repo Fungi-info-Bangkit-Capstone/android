@@ -4,13 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.MainActivity">
+    tools:context=".view.main.MainActivity">
 
     <com.petershaan.fungiinfo_mobileapp.customView.ResizableVideoView
         android:id="@+id/bg_video"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/bg_jamur"
         />
 
     <View
@@ -33,12 +32,12 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/Button1"
+            android:id="@+id/button_1"
             android:layout_width="0dp"
             android:background="@drawable/custom_button2"
             android:textStyle="bold"
             android:textColor="@color/white"
-            android:textSize="16sp"
+            android:textSize="15sp"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
@@ -46,15 +45,15 @@
             android:text="@string/daftar_fungi"
             app:backgroundTint="@null"
             android:padding="15dp"
-            app:layout_constraintBottom_toTopOf="@id/Button2"
+            app:layout_constraintBottom_toTopOf="@id/button_2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/Button2"
+            android:id="@+id/button_2"
             android:layout_width="0dp"
             android:background="@drawable/custom_button"
-            android:textSize="16sp"
+            android:textSize="15sp"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"

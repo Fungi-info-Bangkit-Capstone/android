@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3e15cea9-346c-4246-97ad-4049d7759bbb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/google-services.json" beforeDir="false" afterPath="$PROJECT_DIR$/google-services.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/androidTest/java/com/petershaan/fungiinfo_mobileapp/ExampleInstrumentedTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/androidTest/java/com/petershaan/fungiinfo_mobileapp/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petershaan/fungiinfo_mobileapp/data/local/AppDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petershaan/fungiinfo_mobileapp/data/local/AppDao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petershaan/fungiinfo_mobileapp/data/local/AppDatabase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petershaan/fungiinfo_mobileapp/data/local/AppDatabase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petershaan/fungiinfo_mobileapp/data/local/ClassificationResult.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petershaan/fungiinfo_mobileapp/data/local/ClassificationResult.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petershaan/fungiinfo_mobileapp/data/repository/ResultRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petershaan/fungiinfo_mobileapp/data/repository/ResultRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petershaan/fungiinfo_mobileapp/di/Injection.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petershaan/fungiinfo_mobileapp/di/Injection.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petershaan/fungiinfo_mobileapp/helper/ImageClassifierHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petershaan/fungiinfo_mobileapp/helper/ImageClassifierHelper.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petershaan/fungiinfo_mobileapp/util/Util.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petershaan/fungiinfo_mobileapp/util/Util.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petershaan/fungiinfo_mobileapp/util/ViewModelFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petershaan/fungiinfo_mobileapp/util/ViewModelFactory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petershaan/fungiinfo_mobileapp/view/SplashActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petershaan/fungiinfo_mobileapp/view/SplashActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petershaan/fungiinfo_mobileapp/view/analyze/AnalyzeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petershaan/fungiinfo_mobileapp/view/analyze/AnalyzeActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petershaan/fungiinfo_mobileapp/view/analyze/AnalyzeAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petershaan/fungiinfo_mobileapp/view/analyze/AnalyzeAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petershaan/fungiinfo_mobileapp/view/history/HistoryFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petershaan/fungiinfo_mobileapp/view/history/HistoryFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petershaan/fungiinfo_mobileapp/view/history/HistoryViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petershaan/fungiinfo_mobileapp/view/history/HistoryViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petershaan/fungiinfo_mobileapp/view/home/HomeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petershaan/fungiinfo_mobileapp/view/home/HomeFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/petershaan/fungiinfo_mobileapp/view/profil/ProfilFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/petershaan/fungiinfo_mobileapp/view/profil/ProfilFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ml/cancer_classification.tflite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/custom_button.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/custom_button.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/font/poppins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/font/poppins.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_analyze.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_analyze.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_ganti_password.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_ganti_password.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_lupa_password.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_lupa_password.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_register.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_splash.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_splash.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/classification_result_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/classification_result_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_history.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_profil.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_profil.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values-land/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values-land/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values-w1240dp/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values-w1240dp/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values-w600dp/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values-w600dp/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/xml/backup_rules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/xml/backup_rules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/xml/data_extraction_rules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/petershaan/fungiinfo_mobileapp/ExampleUnitTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/petershaan/fungiinfo_mobileapp/ExampleUnitTest.kt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2hrJxEfwLDqpkPSDgx9vPeGGvhK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "android.gradle.sync.needed": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "C:/Users/peter/Desktop/Capstone/mobile/android"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3e15cea9-346c-4246-97ad-4049d7759bbb" name="Changes" comment="" />
+      <created>1718346506736</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1718346506736</updated>
+    </task>
+    <servers />
+  </component>
+</project>

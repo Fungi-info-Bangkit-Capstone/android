@@ -9,27 +9,29 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="120dp"
+        android:paddingTop="100dp"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
         android:paddingBottom="50dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/iv_profile"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_centerHorizontal="true"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:src="@drawable/image_preview"
+            android:layout_centerHorizontal="true"
             app:civ_border_color="@color/white"
+            android:layout_marginBottom="10dp"
             app:civ_border_width="2dp" />
 
         <TextView
             android:id="@+id/judul"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Profile"
+            android:text="@string/profile"
             android:layout_below="@id/iv_profile"
-            android:textSize="30sp"
+            android:textSize="25sp"
+            android:layout_centerHorizontal="true"
             android:textStyle="bold" />
 
         <View
@@ -47,8 +49,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/garis"
             android:layout_marginTop="20dp"
-            android:text="Nama"
-            android:textSize="20sp" />
+            android:text="@string/nama"
+            android:textSize="15sp" />
 
         <EditText
             android:id="@+id/etName"
@@ -57,9 +59,10 @@
             android:layout_below="@id/namaLabel"
             android:layout_marginTop="10dp"
             android:background="@drawable/custom_button"
-            android:padding="16dp"
+            android:padding="15dp"
             android:inputType="text"
-            android:hint="Nama kamu disini" />
+            android:textSize="15sp"
+            android:hint="@string/nama" />
 
         <TextView
             android:id="@+id/emailLabel"
@@ -67,8 +70,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/etName"
             android:layout_marginTop="20dp"
-            android:text="Email"
-            android:textSize="20sp" />
+            android:text="@string/email"
+            android:textSize="15sp" />
 
         <EditText
             android:id="@+id/etEmail"
@@ -78,23 +81,24 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/custom_button"
             android:padding="16dp"
-            android:inputType="text"
             android:focusable="false"
             android:focusableInTouchMode="false"
             android:textColor="#9C9C9C"
-            android:hint="Email kamu disini" />
+            android:textSize="15sp"
+            android:hint="@string/email" />
 
         <Button
             android:id="@+id/btn_save"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="Simpan"
+            android:text="@string/simpan"
+            android:textAllCaps="true"
             android:background="@drawable/custom_button"
             android:textStyle="bold"
             android:textColor="@color/white"
-            android:textSize="16sp"
-            android:padding="13dp"
+            android:textSize="15sp"
+            android:padding="10dp"
             android:alpha="0.5"
             android:clickable="false"
             android:layout_below="@id/etEmail" />
@@ -105,11 +109,11 @@
             android:background="@drawable/custom_button"
             android:textStyle="bold"
             android:textColor="@color/white"
-            android:textSize="16sp"
+            android:textSize="15sp"
             android:layout_marginTop="10dp"
             android:layout_height="wrap_content"
-            android:text="Ubah Password"
-            android:padding="13dp"
+            android:text="@string/ubah_password"
+            android:padding="10dp"
             android:layout_below="@id/btn_save" />
 
         <Button
@@ -118,15 +122,14 @@
             android:background="@drawable/custom_button2"
             android:textStyle="bold"
             android:textColor="@color/white"
-            android:textSize="16sp"
+            android:textSize="15sp"
             android:layout_marginTop="10dp"
             android:layout_height="wrap_content"
-            android:text="Logout"
+            android:text="@string/keluar"
             app:backgroundTint="@null"
-            android:padding="13dp"
+            android:textAllCaps="true"
+            android:padding="10dp"
             android:layout_below="@id/btn_reset" />
-
-
 
         <ProgressBar
             android:id="@+id/progressBar"
@@ -134,7 +137,6 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:visibility="gone" />
-
 
     </RelativeLayout>
 

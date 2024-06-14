@@ -18,15 +18,13 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.storage.FirebaseStorage
 import com.petershaan.fungiinfo_mobileapp.R
 import com.petershaan.fungiinfo_mobileapp.databinding.FragmentProfilBinding
-import com.petershaan.fungiinfo_mobileapp.view.MainActivity
-import com.petershaan.fungiinfo_mobileapp.view.home.HomeFragment
-import com.petershaan.fungiinfo_mobileapp.view.loginRegister.GantiPasswordActivity
+import com.petershaan.fungiinfo_mobileapp.view.main.MainActivity
+import com.petershaan.fungiinfo_mobileapp.view.ganti.GantiPasswordActivity
 import com.squareup.picasso.Picasso
 import java.io.ByteArrayOutputStream
 
@@ -121,7 +119,6 @@ class ProfilFragment : Fragment() {
     private val textWatcher = object : TextWatcher {
         override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
         override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-            Log.d("ProfilFragment", "Halo aku berjalan")
             updateButtonState()
         }
         override fun afterTextChanged(s: Editable?) {}

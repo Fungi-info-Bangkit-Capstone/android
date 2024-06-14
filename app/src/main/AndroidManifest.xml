@@ -16,25 +16,25 @@
         android:theme="@style/Theme.FungiInfoMobileApp"
         tools:targetApi="31">
         <activity
-            android:name=".view.MainActivity"
+            android:name=".view.main.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".view.loginRegister.LupaPasswordActivity"
+            android:name=".view.lupa.LupaPasswordActivity"
             android:exported="false" />
         <activity
-            android:name=".view.loginRegister.GantiPasswordActivity"
+            android:name=".view.ganti.GantiPasswordActivity"
             android:exported="false" />
         <activity
-            android:name=".view.loginRegister.RegisterActivity"
+            android:name=".view.register.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".view.loginRegister.LoginActivity"
+            android:name=".view.login.LoginActivity"
             android:exported="false" />
         <activity
             android:name=".view.analyze.AnalyzeActivity"
             android:exported="false" />
         <activity
-            android:name=".view.HomeActivity"
+            android:name=".view.home.HomeActivity"
             android:exported="false" />
         <activity
             android:name="com.yalantis.ucrop.UCropActivity"

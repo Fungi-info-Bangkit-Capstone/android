@@ -4,21 +4,6 @@
         <item name="colorPrimary">@color/primary</item>
         <item name="colorSecondary">@color/secondary</item>
         <item name="android:fontFamily">@font/poppins</item>
-        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
     </style>
-
-    <style name="Theme.FungiInfoMobileApp" parent="Base.Theme.FungiInfoMobileApp" />
-
-
-    <style name="CustomButton">
-        <item name="android:background">@drawable/custom_button2</item>
-        <item name="android:textSize">16sp</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
-        <item name="boxStrokeColor">#fff</item>
-        <item name="boxStrokeWidth">2dp</item>
-    </style>
-
 </resources>

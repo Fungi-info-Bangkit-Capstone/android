@@ -8,15 +8,15 @@
     android:paddingTop="100dp"
     android:paddingRight="30dp"
     android:paddingLeft="30dp"
-    tools:context=".view.loginRegister.LoginActivity">
+    tools:context=".view.login.LoginActivity">
 
     <TextView
         android:id="@+id/judul"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
-        android:text="Masuk ke Akun"
-        android:textSize="34sp"
+        android:text="@string/masuk"
+        android:textSize="25sp"
         android:textStyle="bold"
         />
 
@@ -25,9 +25,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
-        android:text="Ketemu Lagi Deh 👋"
+        android:text="@string/masuk_info"
         android:layout_below="@id/judul"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:layout_marginTop="-10dp"
         />
 
@@ -37,10 +37,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/subjudul"
         android:layout_marginTop="30dp"
-        android:text="Email"
+        android:text="@string/email"
         android:textStyle="bold"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="15sp"
         />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -54,7 +54,7 @@
         app:endIconMode="custom"
         app:cursorColor="@color/white"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:endIconDrawable="@drawable/error"
+        app:endIconDrawable="@drawable/ic_error"
         app:endIconTint="@color/hint_color"
         app:endIconContentDescription="Error Icon"
         app:boxStrokeColor="@color/white"
@@ -71,8 +71,9 @@
             android:padding="18dp"
             android:inputType="textEmailAddress"
             android:textColor="@color/white"
+            android:textSize="15sp"
             android:textColorHint="@color/hint_color"
-            android:hint="masukkan email" />
+            android:hint="@string/masukkan_email" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -81,7 +82,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/emailInputLayout"
-        android:text="Pesan Error"
+        android:text="@string/pesan_error"
         android:layout_marginTop="-10dp"
         android:textColor="@color/red"
         android:visibility="gone"
@@ -94,8 +95,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/emailError"
-        android:text="Password"
-        android:textSize="20sp"
+        android:text="@string/password"
+        android:textSize="15sp"
         android:textStyle="bold"
         android:textColor="@color/white"
         />
@@ -127,8 +128,9 @@
             android:padding="18dp"
             android:inputType="textPassword"
             android:textColor="@color/white"
+            android:textSize="15sp"
             android:textColorHint="@color/hint_color"
-            android:hint="masukkan password" />
+            android:hint="@string/masukkan_password" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -139,7 +141,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/passwordInputLayout"
         android:layout_marginTop="-10dp"
-        android:text="Pesan Error"
+        android:text="@string/pesan_error"
         android:textColor="@color/red"
         android:visibility="gone"
         />
@@ -160,11 +162,12 @@
         android:background="@drawable/custom_button2"
         android:textStyle="bold"
         android:textColor="@color/white"
-        android:textSize="16sp"
+        android:textSize="15sp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:padding="15dp"
-        android:text="MASUK"
+        android:textAllCaps="true"
+        android:text="@string/masuk"
         android:layout_below="@id/lupaPassword" />
 
     <LinearLayout
@@ -188,12 +191,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="20dp"
-            android:text="Atau masuk dengan"
+            android:text="@string/atau"
             android:textColor="@color/hint_color"
             android:layout_gravity="center"
             android:textAlignment="center"
             android:layout_weight="1"
-            android:textSize="16sp" />
+            android:textSize="13sp" />
 
         <View
             android:layout_width="20dp"
@@ -212,13 +215,13 @@
         android:layout_marginTop="10dp"
         app:cornerRadius="10dp"
         android:padding="20dp"
-        android:text="Sign In With Google"
+        android:text="@string/google"
         android:layout_below="@id/orLoginWith"
-        android:textSize="16sp"
+        android:textSize="15sp"
         android:textColor="@color/black"
         android:backgroundTint="@color/white"
         android:textStyle="bold"
-        app:icon="@drawable/google"
+        app:icon="@drawable/icon_google"
         app:iconTint="@null"
         app:iconSize="24dp"
         app:iconGravity="textStart"

@@ -12,6 +12,10 @@ interface AppDao {
     @Query("SELECT * FROM classificationresult ORDER BY timestamp DESC")
     fun getAll(): LiveData<List<ClassificationResult>>
 
+    @Query("SELECT * FROM classificationresult WHERE userId = :userId")
+    fun getAllResultsForUser(userId: String): LiveData<List<ClassificationResult>>
+
+
     @Query("SELECT * FROM classificationresult WHERE id = :id")
     fun getClassificationResultById(id: Int): LiveData<ClassificationResult>
 

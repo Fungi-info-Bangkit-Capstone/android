@@ -14,4 +14,5 @@ data class ClassificationResult(
     @ColumnInfo("image_uri") val imageUri: String,
     @ColumnInfo("label") val label: String,
     @ColumnInfo("score") val score: Float,
+    @ColumnInfo("userId") val userId: String
 ) : Parcelable

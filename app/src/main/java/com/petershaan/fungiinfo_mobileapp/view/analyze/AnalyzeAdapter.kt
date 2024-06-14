@@ -19,14 +19,10 @@ class AnalyzeAdapter : ListAdapter<ClassificationResult, AnalyzeAdapter.ViewHold
         fun bind(item: ClassificationResult) {
             Glide.with(itemView)
                 .load(item.imageUri)
-                .into(binding.ivImage)
-            binding.tvLabel.text = item.label
-            binding.tvScore.text = NumberFormat.getPercentInstance().format(item.score)
-            binding.tvTimestamp.text = parseTimestamp(item.timestamp)
-            if (item.label != "Cancer") {
-                binding.tvLabel.setTextColor(itemView.context.getColor(R.color.primary))
-                binding.tvScore.setTextColor(itemView.context.getColor(R.color.primary))
-            }
+                .into(binding.gambar)
+            binding.jenisJamur.text = item.label
+            binding.persen.text = NumberFormat.getPercentInstance().format(item.score)
+            binding.tanggal.text = parseTimestamp(item.timestamp)
         }
     }
 

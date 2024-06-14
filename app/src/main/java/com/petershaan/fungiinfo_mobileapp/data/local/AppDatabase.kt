@@ -18,8 +18,8 @@ abstract class AppDatabase : RoomDatabase() {
                 INSTANCE ?: Room.databaseBuilder(
                     context,
                     AppDatabase::class.java,
-                    "cancer_detection_db"
-                ).build()
+                    "fungi_detection_db"
+                ).fallbackToDestructiveMigration().build()
             }
         }
     }
