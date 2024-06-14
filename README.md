@@ -19,4 +19,4 @@ This repository is created for sharing and educational purposes only. Plagiarism
     * Machine Learning TensorFlow Lite (Still Coming Soon)
     * Room & DataStore
 * Screenshoot
- <img alt="Logo_Bangkit" src="https://raw.githubusercontent.com/Fungi-info-Bangkit-Capstone/android/main/app/src/main/res/drawable/2.png" width="1000" />
+ <img alt="Logo_Bangkit" src="https://raw.githubusercontent.com/Fungi-info-Bangkit-Capstone/android/main/app/src/main/res/drawable/preview.png" width="1000" />
