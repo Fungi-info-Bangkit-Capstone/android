@@ -22,7 +22,7 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/logo"
             android:layout_width="240dp"
             android:layout_height="180dp"
             android:src="@drawable/logov4"

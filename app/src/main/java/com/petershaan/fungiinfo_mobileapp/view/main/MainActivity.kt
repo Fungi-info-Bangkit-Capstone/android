@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import com.google.firebase.auth.FirebaseAuth
 import com.petershaan.fungiinfo_mobileapp.R
 import com.petershaan.fungiinfo_mobileapp.databinding.ActivityMainBinding
+import com.petershaan.fungiinfo_mobileapp.view.about.AboutActivity
 import com.petershaan.fungiinfo_mobileapp.view.home.HomeActivity
 import com.petershaan.fungiinfo_mobileapp.view.login.LoginActivity
 import com.petershaan.fungiinfo_mobileapp.view.register.RegisterActivity
@@ -30,6 +31,11 @@ class MainActivity : AppCompatActivity() {
         setupClickListeners()
 
         viewModel.auth = FirebaseAuth.getInstance()
+
+        binding.logo.setOnClickListener{
+            val intent = Intent(this, AboutActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun setupVideoBackground() {
