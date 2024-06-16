@@ -4,7 +4,7 @@
 
 <div align="center">
 <h1>Mobile App: Capstone Bangkit </h1>
-<img src="https://img.shields.io/badge/by-bangkit%20-red.svg" />
+<img src="https://img.shields.io/badge/powered_by-bangkit%20-red.svg" /> <img src="https://img.shields.io/badge/Cpastone_ID-C241PS495%20-black.svg" />
 </div>
 
 ## ⚠️ Disclaimer 
