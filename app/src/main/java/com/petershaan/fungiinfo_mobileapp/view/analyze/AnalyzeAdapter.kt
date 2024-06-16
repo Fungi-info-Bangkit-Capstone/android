@@ -7,10 +7,9 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.dicoding.asclepius.util.parseTimestamp
-import com.petershaan.fungiinfo_mobileapp.R
 import com.petershaan.fungiinfo_mobileapp.data.local.ClassificationResult
 import com.petershaan.fungiinfo_mobileapp.databinding.ClassificationResultItemBinding
+import com.petershaan.fungiinfo_mobileapp.util.parseTimestamp
 import java.text.NumberFormat
 
 class AnalyzeAdapter : ListAdapter<ClassificationResult, AnalyzeAdapter.ViewHolder>(DIFF_CALLBACK) {
@@ -21,7 +20,7 @@ class AnalyzeAdapter : ListAdapter<ClassificationResult, AnalyzeAdapter.ViewHold
                 .load(item.imageUri)
                 .into(binding.gambar)
             binding.jenisJamur.text = item.label
-            binding.persen.text = NumberFormat.getPercentInstance().format(item.score)
+            binding.persen.text = String.format("%d%%", (item.score * 100).toInt())
             binding.tanggal.text = parseTimestamp(item.timestamp)
         }
     }

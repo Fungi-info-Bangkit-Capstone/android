@@ -2,6 +2,7 @@ package com.petershaan.fungiinfo_mobileapp.data
 
 
 data class Jamur(
+    val label: String,
     val nama: String,
     val deskripsi: String,
     val ciri_ciri: List<String>,
@@ -11,6 +12,7 @@ data class Jamur(
 val daftarJamur = listOf(
     Jamur(
         "amanita",
+        "Amanita",
         "Genus Amanita terdiri dari 600 spesies agarics, termasuk beberapa jamur paling beracun yang diketahui di seluruh dunia, serta beberapa spesies yang dapat dimakan . Genus ini bertanggung jawab atas sekitar 95% kematian akibat keracunan jamur, dengan death cap (Amanita phalloides) terhitung sekitar 50% nya . Racun paling kuat yang ada dalam jamur ini adalah α-Amanitin.\n\nMeskipun beberapa spesies Amanita beracun, ada juga beberapa spesies yang bisa dimakan. Namun, para ahli mikologi sangat tidak menyarankan pemetik jamur selain ahli untuk memilih apa pun dari genus ini untuk dikonsumsi manusia.",
         listOf("Tudung: Biasanya berwarna cerah, seperti merah, oranye, kuning, atau putih. Banyak spesies memiliki bintik-bintik atau tambalan pada tudungnya.",
             "Insang: Biasanya putih atau krem.",
@@ -22,6 +24,7 @@ val daftarJamur = listOf(
 
     Jamur(
         "laetiporus_sulphureus",
+        "Laetiporus Sulphureus",
         "Spesies jamur ini merupakan spesies Laetiporus Sulphureus. Laetiporus Sulphureus, yang dikenal dengan berbagai nama seperti Jamur Ayam Hutan, Jamur Belerang Polypore, atau Kepiting Hutan Belerang, adalah jamur unik yang menarik perhatian banyak orang. Jamur ini tidak hanya memiliki penampilan yang khas, tetapi juga memiliki rasa yang lezat dan potensi manfaat kesehatan.",
         listOf(
             "Topi: Berwarna kuning cerah hingga oranye, berbentuk kipas atau tidak beraturan, dan berukuran 5 hingga 40 cm. Permukaannya berlapis-lapis dan bergelombang, menyerupai daging ayam.",
@@ -38,6 +41,7 @@ val daftarJamur = listOf(
 
     Jamur(
         "lactarius_deliciosus",
+        "Lactarius Deliciosus",
         "Spesies jamur ini merupakan spesies Lactarius Deliciosus. Lactarius Deliciosus, yang lebih dikenal sebagai Jamur Susu Oranye atau Jamur Pinus Merah, adalah salah satu jamur paling terkenal dalam genus Lactarius yang besar. Jamur ini berasal dari Eropa, tetapi telah secara tidak sengaja diperkenalkan ke negara lain bersama dengan pohon pinus, simbionnya. Lactarius Deliciosus dikenal karena rasanya yang lezat dan aromanya yang harum. Jamur ini biasanya dimasak dengan cara ditumis, digoreng, atau dipanggang. Lactarius Deliciosus juga dapat dikeringkan dan digunakan sebagai bumbu.",
         listOf(
             "Topi: Berwarna oranye seperti wortel, berbentuk cembung hingga seperti vas, dan berdiameter 4 hingga 14 cm. Permukaannya lengket dan basah saat basah, dan sering kali memiliki garis-garis oranye yang lebih gelap dalam lingkaran konsentris.",
@@ -54,6 +58,7 @@ val daftarJamur = listOf(
 
     Jamur(
         "flammulina_velutipes",
+        "Flammulina Velutipes",
         "Dikenal sebagai jamur enoki, enokitake, atau kaki beludru, adalah jamur basidiomycete yang dapat dimakan dalam keluarga Physalacriaceae. Spesies ini dapat ditemukan di Eropa dan Amerika Utara. Sebelumnya, Flammulina velutipes dianggap sebagai spesies yang sama dengan Flammulina filiformis dari Asia yang dibudidayakan untuk makanan, tetapi analisis DNA menunjukkan bahwa keduanya berbeda.\n" +
                 "\n" +
                 "Flammulina velutipes adalah jamur yang populer dalam masakan Asia, dan sering digunakan dalam sup, tumis, dan salad. Jamur ini memiliki rasa yang ringan dan sedikit nutty, dan teksturnya yang renyah membuatnya menjadi tambahan yang bagus untuk berbagai hidangan. Flammulina velutipes juga merupakan sumber vitamin dan mineral yang baik, termasuk vitamin B1, B2, dan C, kalium, dan fosfor.\n",
@@ -72,6 +77,7 @@ val daftarJamur = listOf(
 
     Jamur(
         "boletus_reticulatus",
+        "Boletus Reticulatus",
         "Spesies jamur ini merupakan spesies Reticulatus. Boletus reticulatus, sering disebut sebagai summer cep atau netted bolete, adalah jamur basidiomycete besar yang dapat dimakan . Jamur ini berasal dari Eropa dan hidup berdampingan secara simbiosis dengan pohon-pohon gugur seperti oak, beech, chestnut manis, hazel, hornbeam, dan lime. Boletus reticulatus menghasilkan tubuh buah pada musim panas dan dianggap sama lezatnya dengan kerabat dekatnya, Boletus edulis atau cep.",
         listOf(
             "Tudung: Diameter hingga 20 cm, berbentuk setengah bola, cembung, atau cembung datar lalu permukaan tudung biasanya kering, tetapi bisa sedikit lengket saat cuaca basah atau jamur semakin tua. Warnanya biasanya coklat muda hingga coklat tua, terkadang dengan semburat keabu-abuan atau keputihan. Uniknya, tudung Boletus reticulatus tidak berubah menjadi biru saat受伤 (shòushang) atau terluka.",
@@ -89,6 +95,7 @@ val daftarJamur = listOf(
     ),
     Jamur(
         "boletus_edulis",
+        "Boletus Edulis",
         "Spesies jamur ini merupakan spesies Boletus Edulis. Boletus edulis, yang juga dikenal dengan nama cep, porcini, atau penny bun bolete, adalah jamur basidiomycete yang dapat dimakan dan banyak dicari . Jamur ini berasal dari Eropa, Asia, dan Amerika Utara, tetapi juga telah diintroduksi ke beberapa wilayah lain seperti Afrika Selatan, Australia, Selandia Baru, dan Brazil. Boletus edulis dianggap sebagai spesies tipe dari genus Boletus.",
         listOf(
             "Topi: Berwarna coklat muda hingga coklat tua, terkadang dengan semburat merah atau kuning dan Bentuk topi awalnya cembung, kemudian menjadi lebih melebar seiring bertambahnya usia. Permukaan topi bisa halus atau sedikit berkerut.",
@@ -106,6 +113,7 @@ val daftarJamur = listOf(
     ),
     Jamur(
         "phellinus_igniarius",
+        "Phellinus Igniarius",
         "Spesies jamur ini merupakan spesies Phellinus Igiarius. Phellinus Igniarius, sering disebut Jamur Api, Willow Bracket, atau False Tinder Conk, adalah jamur polipori yang memiliki peran ganda di alam. Meskipun jamur ini menyebabkan pembusukan kayu pada pohon inang, Phellinus Igniarius juga memiliki potensi manfaat kesehatan yang menarik dan sejarah penggunaan tradisional yang panjang. Meskipun Phellinus Igniarius memiliki potensi manfaat kesehatan, tidak direkomendasikan untuk dimakan. Risiko keracunan, kandungan senyawa berbahaya, dan kurangnya bukti keamanan membuatnya tidak aman untuk dikonsumsi.",
         listOf(
             "Bentuk: Seperti kuku kuda atau kerang dan bagian atas keras dan bergelombang, terkadang ditumbuhi lumut.",
@@ -117,6 +125,7 @@ val daftarJamur = listOf(
     ),
     Jamur(
         "pleurotus_ostreatus",
+        "Pleurotus Ostreatus",
         "Spesies jamur ini merupakan spesies Pleurotus Ostreatus. Pleurotus Ostreatus, lebih dikenal sebagai Jamur Tiram, adalah jamur populer yang digemari banyak orang karena rasanya yang lezat dan teksturnya yang kenyal. Jamur ini mudah dibudidayakan dan memiliki banyak manfaat kesehatan, menjadikannya pilihan yang tepat untuk pecinta kuliner dan mereka yang ingin hidup sehat.",
         listOf(
             "Topi: Berbentuk kipas atau tidak beraturan, dengan diameter 5-40 cm. Warnanya bervariasi, dari putih, krem, abu-abu, hingga coklat tua. Permukaannya halus atau sedikit berbulu, dengan garis-garis radial yang jelas",
@@ -133,6 +142,7 @@ val daftarJamur = listOf(
     ),
     Jamur(
         "suillus",
+        "Suillus",
         "Spesies jamur ini merupakan genus Suillus. Jamur ini umumnya berasosiasi dengan pohon pinus (Pinaceae) dan banyak ditemukan di daerah beriklim sedang di Belahan Bumi Utara, meskipun beberapa spesies telah diperkenalkan ke Belahan Bumi Selatan. Jamur Suillus, dengan ciri khasnya yang unik, memang bisa dikonsumsi. Namun, penting untuk diingat bahwa konsumsi jamur ini tidak direkomendasikan secara luas. Suillus hidup berdampingan dengan pohon-pohon pinus, dan kebanyakan spesiesnya tersebar di wilayah beriklim sedang di Belahan Bumi Utara. Beberapa spesies bahkan telah diperkenalkan ke Belahan Bumi Selatan.",
         listOf(
             "Topi: bewarna Kuning, oranye, coklat, atau kombinasi warna-warna tersebut. Permukaanya  Lengket atau berlendir saat basah, halus atau sedikit berbulu, dengan garis-garis radial yang jelas. Lalu berbentuk: Kipas, tidak beraturan, atau cembung. berukuran: Diameter 5-40 cm.",
@@ -144,6 +154,7 @@ val daftarJamur = listOf(
     ),
     Jamur(
         "hericium_coralloides",
+        "Hericium Coralloides",
         "Spesies jamur ini merupakan spesies Hericium Coralloides. Hericium coralloides, sering dijuluki sebagai coral tooth fungus (jamur gigi karang) atau comb coral mushroom (jamur karang sisir) , adalah jamur basidiomycete yang cantik dan menarik. Dikenal dengan penampilannya yang unik menyerupai karang gigi, jamur ini dapat dimakan dan memiliki rasa yang lezat.",
         listOf(
             "Bentuk: Tidak memiliki topi dan insang seperti kebanyakan jamur, Struktur tubuh menyerupai gigi atau icicle (tukul es) yang menjuntai ke bawah, Bentuk gigi-giginya runcing dan panjang, menyerupai terumbu karang berwarna putih hingga krem, Panjang gigi-giginya bisa mencapai 1-5 cm, tergantung pada kematangan jamur.",

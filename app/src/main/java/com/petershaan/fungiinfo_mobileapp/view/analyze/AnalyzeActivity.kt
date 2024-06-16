@@ -123,7 +123,6 @@ class AnalyzeActivity : AppCompatActivity() {
 
     private fun updateView(imageUri: Uri, label: String, score: Float) {
         binding.resultImage.setImageURI(imageUri)
-        binding.jenisJamur.text = label
         binding.akurasiPersen.progress = (score * 100).toInt()
 
         val progressAnimator = ObjectAnimator.ofInt(binding.akurasiPersen, "progress", 0, (score * 100).toInt())
@@ -139,8 +138,9 @@ class AnalyzeActivity : AppCompatActivity() {
         }
         textAnimator.start()
 
-        val detectedJamur = daftarJamur.find { it.nama == label }
+        val detectedJamur = daftarJamur.find { it.label == label }
         detectedJamur?.let { jamur ->
+            binding.jenisJamur.text = jamur.nama
             binding.isiDeskripsi.text = jamur.deskripsi
 
             val ciriCiriBuilder = StringBuilder()
@@ -149,7 +149,7 @@ class AnalyzeActivity : AppCompatActivity() {
             }
             binding.isiCiriCiri.text = ciriCiriBuilder.toString().trim()
 
-            if (jamur.nama == "amanita" || jamur.nama == "phellinus_igniarius" || jamur.nama == "suillus") {
+            if (jamur.label == "amanita" || jamur.label == "phellinus_igniarius" || jamur.label == "suillus") {
                 binding.mengapaHarusDihindariLabel.visibility = View.VISIBLE
                 binding.manfaatBagiKesehatanLabel.visibility = View.GONE
             } else {

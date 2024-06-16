@@ -8,6 +8,7 @@ class MainViewModel : ViewModel() {
     var currentPosition: Int = 0
 
     fun isUserLoggedIn(): Boolean {
-        return auth.currentUser != null
+        val currentUser = auth.currentUser
+        return  currentUser != null
     }
 }

@@ -14,7 +14,6 @@ import android.view.Surface
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.Toast
-import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.camera.core.CameraSelector
 import androidx.camera.core.ImageCapture
@@ -22,10 +21,8 @@ import androidx.camera.core.ImageCaptureException
 import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
-import com.dicoding.asclepius.util.createCustomTempFile
-import com.petershaan.fungiinfo_mobileapp.R
 import com.petershaan.fungiinfo_mobileapp.databinding.ActivityCameraBinding
-import com.petershaan.fungiinfo_mobileapp.view.home.HomeActivity
+import com.petershaan.fungiinfo_mobileapp.util.createCustomTempFile
 
 class CameraActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCameraBinding

@@ -14,13 +14,14 @@ abstract class AppDatabase : RoomDatabase() {
         private var INSTANCE: AppDatabase? = null
 
         fun getDatabase(context: Context): AppDatabase {
-            return INSTANCE ?: synchronized(this) {
-                INSTANCE ?: Room.databaseBuilder(
-                    context,
-                    AppDatabase::class.java,
-                    "fungi_detection_db"
-                ).fallbackToDestructiveMigration().build()
+            if (INSTANCE == null) {
+                synchronized(AppDatabase::class.java) {
+                    INSTANCE = Room.databaseBuilder(context.applicationContext,
+                        AppDatabase::class.java, "fungiinfo_database")
+                        .build()
+                }
             }
+            return INSTANCE as AppDatabase
         }
     }
 }
