@@ -23,7 +23,7 @@ This repository is created for sharing and educational purposes only. Plagiarism
     * Oauth With Google
     * View Pagging
     * Profile
-    * Machine Learning TensorFlow Lite (Still Coming Soon)
+    * Machine Learning TensorFlow Lite 
     * Room & DataStore
 * Screenshoot
  <img alt="Logo_Bangkit" src="https://raw.githubusercontent.com/Fungi-info-Bangkit-Capstone/android/main/app/src/main/res/drawable/preview.png" width="1000" />
