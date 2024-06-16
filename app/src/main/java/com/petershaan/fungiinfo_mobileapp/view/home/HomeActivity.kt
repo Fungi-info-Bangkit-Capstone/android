@@ -1,5 +1,6 @@
 package com.petershaan.fungiinfo_mobileapp.view.home
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager.widget.ViewPager
@@ -7,6 +8,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.petershaan.fungiinfo_mobileapp.R
 import com.petershaan.fungiinfo_mobileapp.databinding.ActivityHomeBinding
 import com.petershaan.fungiinfo_mobileapp.adapter.ViewPagerAdapter
+import com.petershaan.fungiinfo_mobileapp.view.about.AboutActivity
 import com.petershaan.fungiinfo_mobileapp.view.history.HistoryFragment
 import com.petershaan.fungiinfo_mobileapp.view.profil.ProfilFragment
 
@@ -27,6 +29,12 @@ class HomeActivity : AppCompatActivity() {
 
         setupViewPager()
         setupBottomNavigationView()
+
+        binding.logo.setOnClickListener{
+            val intent = Intent(this, AboutActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     private fun setupViewPager() {
@@ -60,4 +68,5 @@ class HomeActivity : AppCompatActivity() {
             override fun onPageScrollStateChanged(state: Int) {}
         })
     }
+
 }

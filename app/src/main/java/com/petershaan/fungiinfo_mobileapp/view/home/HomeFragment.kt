@@ -16,6 +16,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
+import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.google.firebase.auth.FirebaseAuth
@@ -23,6 +24,8 @@ import com.petershaan.fungiinfo_mobileapp.R
 import com.petershaan.fungiinfo_mobileapp.databinding.FragmentHomeBinding
 import com.petershaan.fungiinfo_mobileapp.util.ImageViewModel
 import com.petershaan.fungiinfo_mobileapp.view.analyze.AnalyzeActivity
+import com.petershaan.fungiinfo_mobileapp.view.analyze.CameraActivity
+import com.petershaan.fungiinfo_mobileapp.view.analyze.CameraActivity.Companion.CAMERAX_RESULT
 import com.yalantis.ucrop.UCrop
 import java.io.ByteArrayOutputStream
 import java.io.File
@@ -34,22 +37,15 @@ class HomeFragment : Fragment() {
     private val viewModel: ImageViewModel by activityViewModels()
     private lateinit var auth: FirebaseAuth
 
-    private val requestPermissionLauncher =
-        registerForActivityResult(
-            ActivityResultContracts.RequestPermission()
-        ) { isGranted: Boolean ->
+    private val requestGalleryPermissionLauncher =
+        registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted: Boolean ->
+            Log.d("HomeFragment", "requestGalleryPermissionLauncher: $isGranted")
             if (isGranted) {
-                Toast.makeText(requireContext(), "Permission request granted", Toast.LENGTH_LONG).show()
+                startGallery()
             } else {
-                Toast.makeText(requireContext(), "Permission request denied", Toast.LENGTH_LONG).show()
+                Toast.makeText(requireContext(), "Gallery permission denied", Toast.LENGTH_LONG).show()
             }
         }
-
-    private fun allPermissionsGranted() =
-        ContextCompat.checkSelfPermission(
-            requireContext(),
-            Manifest.permission.CAMERA
-        ) == PackageManager.PERMISSION_GRANTED
 
     private val launcherGallery =
         registerForActivityResult(ActivityResultContracts.GetContent()) { uri ->
@@ -78,11 +74,6 @@ class HomeFragment : Fragment() {
             binding.judul.text = user.displayName ?: "Kamu"
         }
 
-        if (!allPermissionsGranted()) {
-            requestPermissionLauncher.launch(Manifest.permission.CAMERA)
-        }
-
-
         viewModel.currentImageUri?.let { uri ->
             binding.previewImageView.setImageURI(uri)
         }
@@ -94,7 +85,7 @@ class HomeFragment : Fragment() {
         }
 
         binding.camera.setOnClickListener {
-            checkCameraPermissionAndStart()
+            startCameraX()
         }
 
         binding.analyze.setOnClickListener {
@@ -103,28 +94,23 @@ class HomeFragment : Fragment() {
 
     }
 
-
-
-    private fun checkCameraPermissionAndStart() {
-        if (ContextCompat.checkSelfPermission(
-                requireContext(),
-                Manifest.permission.CAMERA
-            ) == PackageManager.PERMISSION_GRANTED
-        ) {
-            startCamera()
-        } else {
-            requestPermissionLauncher.launch(Manifest.permission.CAMERA)
-        }
+    private fun startCameraX() {
+        val intent = Intent(context, CameraActivity::class.java)
+        startActivityForResult(intent, CAMERAX_RESULT)
     }
 
     private fun startGallery() {
-        launcherGallery.launch("image/*")
+        if (ContextCompat.checkSelfPermission(
+                requireContext(),
+                Manifest.permission.WRITE_EXTERNAL_STORAGE
+            ) == PackageManager.PERMISSION_GRANTED
+        ) {
+            launcherGallery.launch("image/*")
+        } else {
+            requestGalleryPermissionLauncher.launch(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+        }
     }
 
-    private fun startCamera() {
-        val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-        startActivityForResult(cameraIntent, REQUEST_IMAGE_CAPTURE)
-    }
 
     private fun analyzeImage() {
         val context = requireContext()
@@ -151,12 +137,17 @@ class HomeFragment : Fragment() {
     @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+        Log.d(TAG, "onActivityResult: requestCode: $requestCode, resultCode: $resultCode")
         if (resultCode == Activity.RESULT_OK) {
             when (requestCode) {
                 REQUEST_IMAGE_CAPTURE -> {
-                    val imageBitmap = data?.extras?.get("data") as Bitmap
-                    val imageUri = getImageUri(requireContext(), imageBitmap)
-                    moveToCrop(imageUri)
+                    val imageUriString = data?.getStringExtra(CameraActivity.EXTRA_CAMERAX_IMAGE)
+                    if (imageUriString != null) {
+                        val imageUri = imageUriString.toUri()
+                        moveToCrop(imageUri)
+                    } else {
+                        showToast(getString(R.string.gagal_ambil_foto))
+                    }
                 }
                 UCrop.REQUEST_CROP -> {
                     val resultUri = UCrop.getOutput(data!!)
@@ -173,15 +164,8 @@ class HomeFragment : Fragment() {
         } else if (resultCode == UCrop.RESULT_ERROR) {
             val errorMessage = UCrop.getError(data!!)?.message.toString()
             showToast(errorMessage)
-            Log.e(TAG, errorMessage)
+            Log.d(TAG, "onActivityResult: $errorMessage")
         }
-    }
-
-    private fun getImageUri(inContext: Context, inImage: Bitmap): Uri {
-        val bytes = ByteArrayOutputStream()
-        inImage.compress(Bitmap.CompressFormat.JPEG, 100, bytes)
-        val path = MediaStore.Images.Media.insertImage(inContext.contentResolver, inImage, "Title", null)
-        return Uri.parse(path)
     }
 
     private fun updateButtonStatus() {
@@ -202,7 +186,7 @@ class HomeFragment : Fragment() {
 
     companion object {
         private const val TAG = "HomeFragment"
-        private const val REQUEST_IMAGE_CAPTURE = 100
-        private const val REQUEST_IMAGE_GALLERY = 200
+        private const val REQUEST_IMAGE_CAPTURE = 200
+        private const val REQUEST_IMAGE_GALLERY = 201
     }
 }

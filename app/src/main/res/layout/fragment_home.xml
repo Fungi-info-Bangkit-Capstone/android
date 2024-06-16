@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="50dp"
+    android:paddingTop="40dp"
     tools:context=".view.home.HomeFragment">
 
     <RelativeLayout
@@ -15,7 +15,6 @@
         android:layout_height="170dp"
         app:layout_constraintVertical_bias="1.0"
         android:background="@drawable/rounded_border"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/previewImageView"
@@ -138,7 +137,7 @@
     <ImageView
         android:id="@+id/previewImageView"
         android:layout_width="0dp"
-        android:layout_height="300dp"
+        android:layout_height="360dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="50dp"
@@ -146,10 +145,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/header"
         app:layout_constraintVertical_bias="1.0"
         android:contentDescription="@string/gambar_jamur"
-        app:srcCompat="@drawable/image_preview" />
+        app:srcCompat="@drawable/home" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

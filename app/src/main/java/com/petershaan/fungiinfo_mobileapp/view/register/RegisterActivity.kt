@@ -30,6 +30,10 @@ class RegisterActivity : AppCompatActivity() {
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.closeButton.setOnClickListener{
+            finish()
+        }
+
         errorIcon = ContextCompat.getDrawable(this, R.drawable.ic_error)!!
         validIcon = ContextCompat.getDrawable(this, R.drawable.ic_success)!!
 

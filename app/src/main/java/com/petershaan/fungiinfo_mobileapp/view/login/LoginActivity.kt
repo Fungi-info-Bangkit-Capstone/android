@@ -34,6 +34,10 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.closeButton.setOnClickListener{
+            finish()
+        }
+
         initIcons()
         setupListeners()
         observeViewModel()

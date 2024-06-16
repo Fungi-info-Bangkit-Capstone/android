@@ -74,4 +74,22 @@
     <string name="mengapa_dihindari">Mengapa Dihindari</string>
     <string name="jamur_yang_kamu_simpan">Jamur Yang Kamu Simpan</string>
     <string name="history">History</string>
+    <string name="about_fungi">Fungi.Info is a mobile application that uses <b>AI and image recognition</b> to identify fungi species from images, helping users distinguish between edible and poisonous varieties during outdoor activities.</string>
+    <string name="meet_our_team"><b>C241-PS495</b> - Meet Our Team</string>
+    <string name="profil_1">Peter</string>
+    <string name="mobile_developer">Mobile Developer</string>
+    <string name="profil_2">Ocha</string>
+    <string name="machine_learning">Machine Learning</string>
+    <string name="profil_3">Nandito</string>
+    <string name="profil_4">Arjuna</string>
+    <string name="profil_5">Gladwin</string>
+    <string name="cloud_computing">Cloud Computing</string>
+    <string name="profil_6">Salsabila</string>
+    <string name="why_fungi">Why Fungi.Info</string>
+    <string name="why_fungi_isi">Fungi.Info was developed as our capstone project at <b>Bangkit Academy 2024.</b> We aimed to create an AI-powered app that accurately identifies mushroom species, helping users distinguish between edible and toxic varieties during outdoor activities. Our goal is to provide essential knowledge and enhance safety for mushroom enthusiasts and adventurers.</string>
+    <string name="what_fungi">What Mushroom can we Detect?</string>
+    <string name="what_fungi_isi_1">Fungi.Info is equipped to identify a diverse range of mushroom species with precision and reliability. Our app can detect popular mushrooms such as</string>
+    <string name="powered_by">Powered by</string>
+    <string name="logo_sponsor">Logo_sponsor</string>
+    <string name="close_button">Close Button</string>
 </resources>

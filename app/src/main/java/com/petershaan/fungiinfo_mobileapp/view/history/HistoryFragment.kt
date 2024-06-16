@@ -49,11 +49,18 @@ class HistoryFragment : Fragment() {
 
     private fun observeLiveData() {
         auth.currentUser?.let { user ->
-            viewModel.loadResultsForUser(user.uid)
+            viewModel.isLoading.observe(viewLifecycleOwner) { isLoading ->
+                if (isLoading) {
+                    binding.progressBar.visibility = View.VISIBLE
+                } else {
+                    binding.progressBar.visibility = View.GONE
+                }
+            }
             viewModel.results.observe(viewLifecycleOwner) { results ->
                 setResults(results)
                 toggleEmptyView(results)
             }
+            viewModel.loadResultsForUser(user.uid, viewLifecycleOwner)
         }
     }
 

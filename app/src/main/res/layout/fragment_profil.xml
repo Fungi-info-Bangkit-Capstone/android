@@ -9,7 +9,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="100dp"
+        android:paddingTop="70dp"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
         android:paddingBottom="50dp">

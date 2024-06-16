@@ -1,5 +1,7 @@
 package com.petershaan.fungiinfo_mobileapp.view.analyze
 
+import android.animation.ObjectAnimator
+import android.animation.ValueAnimator
 import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
@@ -123,7 +125,19 @@ class AnalyzeActivity : AppCompatActivity() {
         binding.resultImage.setImageURI(imageUri)
         binding.jenisJamur.text = label
         binding.akurasiPersen.progress = (score * 100).toInt()
-        binding.persen.text = getString(R.string.persen, (score * 100).toInt())
+
+        val progressAnimator = ObjectAnimator.ofInt(binding.akurasiPersen, "progress", 0, (score * 100).toInt())
+        progressAnimator.duration = 1500
+        progressAnimator.start()
+
+        val currentScore = binding.persen.text.toString().removeSuffix("%").toIntOrNull() ?: 0
+        val newScore = (score * 100).toInt()
+        val textAnimator = ValueAnimator.ofInt(currentScore, newScore)
+        textAnimator.duration = 2000
+        textAnimator.addUpdateListener { animation ->
+            binding.persen.text = getString(R.string.persen, animation.animatedValue as Int)
+        }
+        textAnimator.start()
 
         val detectedJamur = daftarJamur.find { it.nama == label }
         detectedJamur?.let { jamur ->
@@ -135,10 +149,10 @@ class AnalyzeActivity : AppCompatActivity() {
             }
             binding.isiCiriCiri.text = ciriCiriBuilder.toString().trim()
 
-            if (jamur.nama == "amanita") {
+            if (jamur.nama == "amanita" || jamur.nama == "phellinus_igniarius" || jamur.nama == "suillus") {
                 binding.mengapaHarusDihindariLabel.visibility = View.VISIBLE
                 binding.manfaatBagiKesehatanLabel.visibility = View.GONE
-            } else if (jamur.nama == "boletus") {
+            } else {
                 binding.mengapaHarusDihindariLabel.visibility = View.GONE
                 binding.manfaatBagiKesehatanLabel.visibility = View.VISIBLE
             }
