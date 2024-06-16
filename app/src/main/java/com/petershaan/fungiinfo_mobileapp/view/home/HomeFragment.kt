@@ -37,15 +37,6 @@ class HomeFragment : Fragment() {
     private val viewModel: ImageViewModel by activityViewModels()
     private lateinit var auth: FirebaseAuth
 
-    private val requestGalleryPermissionLauncher =
-        registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted: Boolean ->
-            Log.d("HomeFragment", "requestGalleryPermissionLauncher: $isGranted")
-            if (isGranted) {
-                startGallery()
-            } else {
-                Toast.makeText(requireContext(), "Gallery permission denied", Toast.LENGTH_LONG).show()
-            }
-        }
 
     private val launcherGallery =
         registerForActivityResult(ActivityResultContracts.GetContent()) { uri ->
@@ -100,15 +91,8 @@ class HomeFragment : Fragment() {
     }
 
     private fun startGallery() {
-        if (ContextCompat.checkSelfPermission(
-                requireContext(),
-                Manifest.permission.WRITE_EXTERNAL_STORAGE
-            ) == PackageManager.PERMISSION_GRANTED
-        ) {
             launcherGallery.launch("image/*")
-        } else {
-            requestGalleryPermissionLauncher.launch(Manifest.permission.WRITE_EXTERNAL_STORAGE)
-        }
+
     }
 
 
