@@ -11,6 +11,7 @@ import com.petershaan.fungiinfo_mobileapp.adapter.ViewPagerAdapter
 import com.petershaan.fungiinfo_mobileapp.view.about.AboutActivity
 import com.petershaan.fungiinfo_mobileapp.view.history.HistoryFragment
 import com.petershaan.fungiinfo_mobileapp.view.profil.ProfilFragment
+import com.petershaan.fungiinfo_mobileapp.view.upgrade.UpgradeFragment
 
 class HomeActivity : AppCompatActivity() {
 
@@ -42,6 +43,7 @@ class HomeActivity : AppCompatActivity() {
         pagerAdapter.addFragment(HomeFragment())
         pagerAdapter.addFragment(HistoryFragment())
         pagerAdapter.addFragment(ProfilFragment())
+        pagerAdapter.addFragment(UpgradeFragment())
         viewPager.adapter = pagerAdapter
     }
 
@@ -51,6 +53,7 @@ class HomeActivity : AppCompatActivity() {
                 R.id.home -> viewPager.currentItem = 0
                 R.id.history -> viewPager.currentItem = 1
                 R.id.profile -> viewPager.currentItem = 2
+                R.id.diamond -> viewPager.currentItem = 3
             }
             true
         }
@@ -62,6 +65,7 @@ class HomeActivity : AppCompatActivity() {
                     0 -> bottomNav.menu.findItem(R.id.home).isChecked = true
                     1 -> bottomNav.menu.findItem(R.id.history).isChecked = true
                     2 -> bottomNav.menu.findItem(R.id.profile).isChecked = true
+                    3 -> bottomNav.menu.findItem(R.id.diamond).isChecked = true
                 }
             }
 

@@ -92,4 +92,14 @@
     <string name="powered_by">Powered by</string>
     <string name="logo_sponsor">Logo_sponsor</string>
     <string name="close_button">Close Button</string>
+    <string name="pro_text_fitur_1"><![CDATA[Upload & Sync data dengan Internet]]></string>
+    <string name="pro_text_fitur_2">Live Preview Fungi Scan</string>
+    <string name="pro_text_fitur_3">Berbagi Fungi Satu dengan Yang lain</string>
+    <string name="pro_text_fitur_4">Model 3 Fungi yang lebih PRO</string>
+    <string name="pro_text_fitur_5">Tidak ada Iklan</string>
+    <string name="pro_button">UNLOCK PREMIUM RP. 50k/bulan</string>
+    <string name="pro_caption">Bergabung dengan Komunita Fungi.info pro sedunia</string>
+    <string name="pro_judul">Icon Upgrade Pro</string>
+    <string name="home">Home</string>
+    <string name="upgrade">Upgrade</string>
 </resources>

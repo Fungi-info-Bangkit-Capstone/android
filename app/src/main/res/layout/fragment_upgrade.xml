@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/primary"
+    tools:context=".view.upgrade.UpgradeFragment">
+
+    <ImageView
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@drawable/bg_jamur_2"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/gambar_jamur"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/banner_judul"
+        android:layout_width="210dp"
+        android:layout_height="40dp"
+        android:background="@drawable/upgrade_pro"
+        android:contentDescription="@string/pro_judul"
+        app:layout_constraintTop_toBottomOf="@id/banner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp" />
+
+    <TextView
+        android:id="@+id/caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pro_caption"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/banner_judul"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <LinearLayout
+        android:id="@+id/fitur"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintTop_toBottomOf="@id/caption"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:drawableStartCompat="@drawable/icon_check"
+            android:drawablePadding="10dp"
+            android:text="@string/pro_text_fitur_1"
+            android:textSize="12sp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:drawableStartCompat="@drawable/icon_check"
+            android:drawablePadding="20dp"
+            android:text="@string/pro_text_fitur_2"
+            android:textSize="12sp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:drawableStartCompat="@drawable/icon_check"
+            android:drawablePadding="20dp"
+            android:text="@string/pro_text_fitur_3"
+            android:textSize="12sp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:drawableStartCompat="@drawable/icon_check"
+            android:drawablePadding="20dp"
+            android:text="@string/pro_text_fitur_4"
+            android:textSize="12sp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:drawableStartCompat="@drawable/icon_check"
+            android:drawablePadding="20dp"
+            android:text="@string/pro_text_fitur_5"
+            android:textSize="12sp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_upgrade_pro"
+        android:layout_width="match_parent"
+        android:background="@drawable/custom_button3"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content"
+        android:text="@string/pro_button"
+        app:backgroundTint="@null"
+        android:textAllCaps="true"
+        android:padding="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fitur"
+        app:layout_constraintEnd_toEndOf="parent"
+       />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

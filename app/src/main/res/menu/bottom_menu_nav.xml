@@ -6,17 +6,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:icon="@drawable/icon_home"
-        android:title="Home" />
+        android:title="@string/home" />
     <item
         android:id="@+id/history"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:icon="@drawable/icon_history"
-        android:title="History" />
+        android:title="@string/history" />
     <item
         android:id="@+id/profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:icon="@drawable/icon_person"
-        android:title="Profile" />
+        android:title="@string/profile" />
+    <item
+        android:id="@+id/diamond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/icon_diamond"
+        android:title="@string/upgrade" />
 </menu>
